@@ -1,0 +1,17 @@
+ .roles{
+     display: inline-block;
+     margin-right: 10px;
+ }
+ .userContainer {
+  padding: 10px;
+ }
+ .userContainer h1,.userContainer h3{
+    display: inline-block;
+ }
+ .userContainer h1{
+    margin-right: 10px;
+ }
+
+ .roles{
+     margin-bottom: 10px;
+ }

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="userContainer" *ngFor="let user of users">
+    <h1>{{user.Nom }} {{user.Prenom }}</h1>
+    <h3> {{fonctions[user.fonction].nom}}</h3>
+    <h4>Appuyer sur roles pour le supprimer :</h4>
+    <div class="roles" *ngFor="let role of user.roles" (click)=deleteRole(role,user)>     
+      <button class="btn btn-danger ">{{roles[role].nom}}</button>
+    </div>
+
+    <h4>Choisir une fonction:</h4>
+    <select class="custom-select selectFonction" name="fonction" (change)="selectFonction($event,user)">
+      <option *ngFor="let fonction of objectKeys(fonctions)" [value]="fonction"
+        [selected]="fonctions[user.fonction].id == fonctions[fonction].id">
+        {{fonctions[fonction].nom}}
+      </option>
+  
+    </select>
+    <hr>
+  </div>
+</div>
