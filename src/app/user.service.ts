@@ -28,10 +28,4 @@ export class UserService {
     return this._http.put("http://127.0.0.1:8000/api/utilisateurs/" + id, user)
   }
 
-  getAvatar(name:string,size:number=200){
-
-    return this._http.get("https://api.adorable.io/avatars/"+size+"/"+name+".png")
-  }
-
-
 }
